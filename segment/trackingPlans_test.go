@@ -37,15 +37,15 @@ const (
 			  "traits": {
 				"type": "object",
 				"properties": {
-          "pattern_prop_1": {
-            "type": "object",
-              "patternProperties": {
-                "^[0-9]+$": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+					"pattern_prop_1": {
+						"type": "object",
+						"patternProperties": {
+							"^[0-9]+$": {
+							"type": "string"
+							}
+						}
+						}
+					}
 				}
 			}
 		  },
