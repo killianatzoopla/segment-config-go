@@ -34,7 +34,19 @@ const (
 				]
 			  },
 			  "properties": {},
-			  "traits": {}
+			  "traits": {
+				"type": "object",
+				"properties": {
+          "pattern_prop_1": {
+            "type": "object",
+              "patternProperties": {
+                "^[0-9]+$": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+				}
 			}
 		  },
 		  "events": [
@@ -222,7 +234,19 @@ func TestTrackingPlans_GetTrackingPlan(t *testing.T) {
 						Required: []string{"context_prop_1"},
 					},
 					Properties: Properties{},
-					Traits:     Properties{},
+					Traits: Properties{
+						Type: "object",
+						Properties: map[string]Property{
+							"pattern_prop_1": {
+								Type: "object",
+								PatternProperties: map[string]Property{
+									"^[0-9]+$": {
+										Type: "string",
+									},
+								},
+							},
+						},
+					},
 				},
 			},
 			Events: []Event{
@@ -333,7 +357,19 @@ func TestTrackingPlans_CreateTrackingPlan(t *testing.T) {
 						Required: []string{"context_prop_1"},
 					},
 					Properties: Properties{},
-					Traits:     Properties{},
+					Traits: Properties{
+						Type: "object",
+						Properties: map[string]Property{
+							"pattern_prop_1": {
+								Type: "object",
+								PatternProperties: map[string]Property{
+									"^[0-9]+$": {
+										Type: "string",
+									},
+								},
+							},
+						},
+					},
 				},
 			},
 			Events: []Event{
@@ -448,7 +484,19 @@ func TestTrackingPlans_UpdateTrackingPlan(t *testing.T) {
 						Required: []string{"context_prop_1"},
 					},
 					Properties: Properties{},
-					Traits:     Properties{},
+					Traits: Properties{
+						Type: "object",
+						Properties: map[string]Property{
+							"pattern_prop_1": {
+								Type: "object",
+								PatternProperties: map[string]Property{
+									"^[0-9]+$": {
+										Type: "string",
+									},
+								},
+							},
+						},
+					},
 				},
 			},
 			Events: []Event{
