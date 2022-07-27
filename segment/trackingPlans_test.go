@@ -41,12 +41,12 @@ const (
 						"type": "object",
 						"patternProperties": {
 							"^[0-9]+$": {
-							"type": "string"
+								"type": "string"
 							}
-						}
 						}
 					}
 				}
+			  }
 			}
 		  },
 		  "events": [
